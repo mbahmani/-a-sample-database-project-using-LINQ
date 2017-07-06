@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="mydb1" Class="LINQDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\mydb1.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="WindowsFormsApplication13.Properties.Settings" SettingsPropertyName="mydb1ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Table1" Member="Table1s">
+    <Type Name="Table1">
+      <Column Name="row" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="family" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.pDelete" Method="pDelete">
+    <Parameter Name="Row" Parameter="row" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Pedit" Method="Pedit">
+    <Parameter Name="row" Type="System.Int32" DbType="Int" />
+    <Parameter Name="name" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="family" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.pSave" Method="pSave">
+    <Parameter Name="Row" Parameter="row" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="Family" Parameter="family" Type="System.String" DbType="NVarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
